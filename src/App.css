@@ -1,0 +1,180 @@
+[page-theme='dark']{
+  --background: rgb(45, 45, 45);
+  --text-main-headers: rgb(230, 230, 230);
+  --text-secondary-headers: rgb(210, 210, 210);
+  --text-primary: rgb(180, 180, 180);
+  --card-background: rgb(30, 30, 30);
+  --card-border: rgb(35, 35, 35);
+  --lines-opacity: 1;
+}
+
+[page-theme='light'] {
+  --background: rgb(245, 245, 245);
+  --text-main-headers: rgb(75, 75, 75);
+  --text-secondary-headers: rgb(45, 45, 45);
+  --text-primary: rgb(25, 25, 25);
+  --card-background: rgb(255, 255, 255);
+  --card-border: rgb(128, 128, 128);
+  --lines-opacity: 0;
+}
+
+#header{
+  text-align: right;
+}
+#header select, #header option{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  color: var(--text-main-headers);
+  border: 0;
+  height: 24px;
+  vertical-align: 25%;
+  width: fit-content;
+  padding-right: 3px;
+  margin: 0;
+}
+
+#lang-chooser{
+  cursor: pointer;
+}
+
+#header select::-ms-expand {
+  display: none;
+}
+
+#header option {
+  background-color: var(--background);
+}
+
+#header select:focus{
+  outline: none;
+}
+
+#theme-switcher{
+  color: var(--text-main-headers);
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+#cv-downloader{
+  color: var(--text-main-headers);
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+
+svg{
+  padding: 0;
+}
+
+svg #light-lines{
+  opacity: var(--lines-opacity);
+  transition: opacity 300ms ease;
+}
+
+svg #inner-bulb{
+  fill: var(--background);
+}
+
+.content, a{
+  text-align: left;
+  color: var(--text-primary);
+  max-width: 1700px;
+  margin: auto;
+  
+}
+
+body *{
+  transition: color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+body{
+  background-color: var(--background);
+  padding: 1%;
+  margin: 0;
+}
+
+h1, h2{
+  color: var(--text-main-headers);
+}
+
+h3, h4{
+  color: var(--text-secondary-headers);
+} 
+
+.card{
+  border-color: var(--card-border);
+  background-color: var(--card-background);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 15px;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 95%;
+  height: fit-content;
+  margin: 10px 0 10px 0;
+}
+
+
+.loader-exit-active{
+  opacity: 0;
+}
+
+.loader {
+  position: fixed;
+  top: 46%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  transform: -webkit-translate(-50%, -50%);
+  transform: -moz-translate(-50%, -50%);
+  transform: -ms-translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;
+  background-color: var(--background);
+}
+.loader div {
+  position: absolute;
+  border: 4px solid var(--text-main-headers);
+  opacity: 1;
+  border-radius: 50%;
+  animation: ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}

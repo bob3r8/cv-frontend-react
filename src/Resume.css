@@ -1,0 +1,174 @@
+h1, h2{
+    text-align: center;
+    margin-top: 1%;
+}
+
+table{
+    width: 100%;
+}
+
+table h3{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 0;
+    margin-right: 0;
+}
+#skills{
+    height: fit-content;
+}
+
+#education{
+    vertical-align: middle;
+    align-self: center;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    margin-bottom:2px
+}
+
+.left_column{
+    text-align: left;
+    padding: 1%;
+}
+
+.right_column{
+    text-align: right;
+    padding: 1%;
+}
+
+#program_langs{
+    width: 100%;
+}
+#skills-right_side{
+    width: 100%;
+    padding-left: 10%;
+}
+
+td, tr{
+   font-weight: bold; 
+   margin: 0;
+   padding: 0;
+   height: fit-content;
+   width: fit-content;
+}
+
+#work_experience_list{
+    
+    height: fit-content;
+    grid-area: work_exp;
+}
+#work_experience_list li{
+    border-bottom: 2px solid ;
+    border-radius: 7px;
+    padding: 0;
+}
+
+.work_experience_header{
+    display: grid;
+}
+
+.work_experience_header{
+    grid-template-columns: 67% 33%;
+}
+@media screen and (max-width: 650px) {
+    .work_experience_header{grid-template-columns: 1fr;}
+    .work_experience_header h4, .work_experience_header.right_column, .work_experience_header.left_column{
+        margin-top: 0; 
+        margin-bottom: 0;
+    }
+}
+
+#resume-left_side, #resume-right_side{
+    padding: 0;
+    margin: 0 10px 0 10px;
+}
+
+#resume{
+    display: grid;
+    grid-template:
+    'left_side  right_side'
+    'left_side  right_side'
+    'work_exp   work_exp';
+    grid-template-columns: 30% 70%;
+} 
+#skills_list{
+    display: flex;
+}
+#skills_list ul{
+    padding-bottom: 1%;
+}
+li{
+    padding-left: 5%;
+}
+
+#summary>div, #work_experience_list>ul{
+    padding: 0px 5px 0px 5px;
+    text-indent: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    #skills_list{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #resume{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template:
+        'personal'
+        'summary'
+        'skills'
+        'education'
+        'work_exp';
+    }
+    #skills ul{
+        width: auto;
+    }
+    #skills div{
+        text-align: center;
+        width: 100%;
+        align-self: center;
+    }
+    #skills-right_side{
+        padding-left: 0;
+    }
+    li{
+        padding-left: 0%;
+    }
+    table{
+        align-self: center;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) and (min-width: 900px){
+    #resume{
+        grid-template-columns: 42% 58%;
+    }
+}
+
+
+@keyframes appeareFromBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    50%{
+       opacity: 0.33;
+       transform: translateY(50px)
+    } 
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
+
